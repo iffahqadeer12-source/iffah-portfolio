@@ -14,7 +14,7 @@ function Projects() {
     const fetchProjects = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5001/api/projects"
+          "https://iffah-portfolio-backend.vercel.app/api/projects"
         );
 
         setProjects(response.data);
