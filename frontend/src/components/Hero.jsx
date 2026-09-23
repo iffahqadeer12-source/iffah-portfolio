@@ -12,35 +12,35 @@ function Hero() {
         </h1>
 
         <h2>
-          MERN Stack & Full-Stack Developer
+          Full-Stack Developer | React • Node.js • MongoDB
         </h2>
 
         <p className="hero-description">
-          Computer Engineering student passionate about building modern,
-          responsive and full-stack web applications using React, Node.js,
-          Express and MongoDB.
+          Computer Engineering student and Full-Stack Developer building
+          responsive, scalable web applications with React, Node.js,
+          Express.js, and MongoDB.
         </p>
 
         <div className="hero-buttons">
 
-  <a href="#projects" className="primary-btn">
-    View My Work
-  </a>
+          <a href="#projects" className="primary-btn">
+            View My Projects
+          </a>
 
-  <a href="#contact" className="secondary-btn">
-    Let's Connect
-  </a>
+          <a
+            href="/Iffah-Qadeer-Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="secondary-btn"
+          >
+            Download Resume
+          </a>
 
-  <a
-    href="/Iffah-Qadeer-Resume.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="secondary-btn"
-  >
-    Download Resume
-  </a>
+          <a href="#contact" className="secondary-btn">
+            Get in Touch
+          </a>
 
-</div>
+        </div>
 
         <div className="social-links">
 

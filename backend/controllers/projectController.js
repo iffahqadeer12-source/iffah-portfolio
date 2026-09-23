@@ -2,7 +2,7 @@ const Project = require("../models/Project");
 
 const getProjects = async (req, res) => {
   try {
-    const projects = await Project.find().sort({ createdAt: -1 });
+    const projects = await Project.find().sort({ number: 1 });
     res.json(projects);
   } catch (error) {
     res.status(500).json({
@@ -44,9 +44,31 @@ const deleteProject = async (req, res) => {
     });
   }
 };
+const updateProject = async (req, res) => {
+  try {
+    const project = await Project.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true, runValidators: true }
+    );
 
+    if (!project) {
+      return res.status(404).json({
+        message: "Project not found",
+      });
+    }
+
+    res.json(project);
+  } catch (error) {
+    res.status(400).json({
+      message: "Failed to update project",
+      error: error.message,
+    });
+  }
+};
 module.exports = {
   getProjects,
   createProject,
+  updateProject,
   deleteProject,
 };

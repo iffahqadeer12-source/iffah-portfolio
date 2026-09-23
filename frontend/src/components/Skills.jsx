@@ -1,10 +1,10 @@
 const skills = [
   {
-    title: "Frontend",
+    title: "Frontend Development",
     skills: "HTML5 • CSS3 • JavaScript • React • Tailwind CSS",
   },
   {
-    title: "Backend",
+    title: "Backend Development",
     skills: "Node.js • Express.js • REST APIs",
   },
   {
@@ -16,7 +16,7 @@ const skills = [
     skills: "Python • JavaScript • C++ • OOP • DSA",
   },
   {
-    title: "Tools",
+    title: "Development Tools",
     skills: "Git • GitHub • Postman • VS Code • Vite",
   },
   {
@@ -31,8 +31,13 @@ function Skills() {
       <p className="section-label">MY SKILLS</p>
 
       <h2>
-        Technologies I work with.
+        Technologies I use to build and develop.
       </h2>
+
+      <p className="section-text skills-intro">
+        A growing technical toolkit across full-stack development,
+        programming, AI, and cybersecurity.
+      </p>
 
       <div className="skills-container">
         {skills.map((skill) => (

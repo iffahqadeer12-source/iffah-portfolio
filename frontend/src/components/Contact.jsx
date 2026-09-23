@@ -31,7 +31,7 @@ function Contact() {
       );
 
       setStatus("Message sent successfully!");
-      
+
       setFormData({
         name: "",
         email: "",
@@ -46,14 +46,17 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="contact-section">
+    <section id="contact" className="contact-section section">
       <div className="section-container">
 
         <div className="section-heading">
-          <span>06</span>
-          <h2>Let's Work Together</h2>
+          <p className="section-label">GET IN TOUCH</p>
+
+          <h2>Let's build something together.</h2>
+
           <p>
-            Have a project or opportunity in mind? Send me a message.
+            Have a project, internship opportunity, or simply want to
+            connect? I'd love to hear from you.
           </p>
         </div>
 
@@ -95,18 +98,22 @@ function Contact() {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              placeholder="Tell me about your project..."
+              placeholder="Tell me about your project or opportunity..."
               rows="6"
               required
             />
           </div>
 
-          <button type="submit" disabled={loading}>
+          <button type="submit" className="contact-submit" disabled={loading}>
             {loading ? "Sending..." : "Send Message ↗"}
           </button>
 
           {status && (
-            <p className="form-status">
+            <p
+              className={`form-status ${
+                status.includes("successfully") ? "success" : "error"
+              }`}
+            >
               {status}
             </p>
           )}
